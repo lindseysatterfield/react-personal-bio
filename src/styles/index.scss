@@ -1,6 +1,45 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
 body {
-  background-color: $favColor;
+  background-image: url(../assets/bg.jpg);
+  font-family: 'Sora', sans-serif;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.name-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: left;
+  margin-right: 5em;
+}
+
+.contact-icons {
+  width: 3em;
+  margin-right: .5em;
+}
+
+.github {
+  width: 2.5em;
+}
+
+.mail {
+  width: 3.5em;
+}
+
+.lindsey-img {
+  width: 12em;
 }
