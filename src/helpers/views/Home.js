@@ -4,7 +4,7 @@ import Bio from './Bio';
 
 export default function Home() {
   return (
-    <div>
+    <div className="main-container">
       <Bio />
     </div>
   );

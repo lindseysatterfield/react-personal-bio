@@ -1,45 +1,19 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import 'bio';
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
-  background-image: url(../assets/bg.jpg);
   font-family: 'Sora', sans-serif;
   margin: 0 auto;
+  background: $bg-img no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em;
-}
-
-.name-header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.header {
-  text-align: left;
-  margin-right: 5em;
-}
-
-.contact-icons {
-  width: 3em;
-  margin-right: .5em;
-}
-
-.github {
-  width: 2.5em;
-}
-
-.mail {
-  width: 3.5em;
-}
-
-.lindsey-img {
-  width: 12em;
+.main-container {
+  width: 90%;
+  margin: 0 auto;
 }
