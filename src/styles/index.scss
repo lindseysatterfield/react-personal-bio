@@ -3,8 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
 body {
-  background-image: url(../assets/bg.jpg);
   font-family: 'Sora', sans-serif;
+  margin: 0 auto;
+  background: $bg-img no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-container {
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -13,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 1em;
+  flex-wrap: wrap;
 }
 
 .name-header-container {
@@ -20,6 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -28,18 +39,35 @@ body {
 }
 
 .contact-icons {
-  width: 3em;
+  width: 2em;
   margin-right: .5em;
 }
 
-.github {
-  width: 2.5em;
+.mail {
+  width: 2.3em;
 }
 
-.mail {
-  width: 3.5em;
+.linkedin {
+  width: 2.3em;
+}
+
+.github {
+  width: 1.9em;
 }
 
 .lindsey-img {
   width: 12em;
+}
+ 
+p {
+  margin: 2em auto;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+@media (max-width: 1083px) {
+  .header {
+    text-align: center;
+    margin-right: 0;
+  }
 }
