@@ -9,7 +9,7 @@ export default function Bio() {
     <div className="header-container">
         <div className="name-header-container">
           <div className="header">
-            <h1 className="my-4">LINDSEY SATTERFIELD</h1>
+            <h1 className="my-4 font-weight-bold">LINDSEY SATTERFIELD</h1>
             <h3>software developer</h3>
             <div id="contact-me">
               <a href="mailto:satterfield.lindsey@gmail.com"><img src={mail} className="contact-icons mail" alt="mail icon"/></a>
