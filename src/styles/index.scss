@@ -1,12 +1,13 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
 @import 'bio';
+@import 'technologies';
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
   font-family: 'Sora', sans-serif;
   margin: 0 auto;
-  background: $bg-img no-repeat center center fixed; 
+  background: url(../assets/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
