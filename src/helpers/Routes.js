@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import Bio from './views/Bio';
 import Contact from './views/Contact';
@@ -6,7 +7,7 @@ import Home from './views/Home';
 import Projects from './views/Projects';
 import Technologies from './views/Technologies';
 
-export default function Routes() {
+export default function Routes({ admin, projects, setProjects }) {
   return (
     <div>
       <Switch>
@@ -19,8 +20,9 @@ export default function Routes() {
         <Route exact path='/technologies'
         component={Technologies}
         />
-        <Route exact path='/projects'
-        component={Projects}
+        <Route
+          exact path='/projects'
+          component={() => <Projects admin={admin} projects={projects} setProjects={setProjects} />}
         />
         <Route exact path='/contact-me'
         component={Contact}
@@ -29,3 +31,9 @@ export default function Routes() {
     </div>
   );
 }
+
+Routes.propTypes = {
+  admin: PropTypes.any,
+  projects: PropTypes.array,
+  setProjects: PropTypes.func
+};
