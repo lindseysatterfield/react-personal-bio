@@ -13,9 +13,9 @@ export default function Bio() {
               <h1 className="my-4 font-weight-bold">LINDSEY SATTERFIELD</h1>
               <h3>software developer</h3>
               <div id="contact-me">
-                <a href="mailto:satterfield.lindsey@gmail.com"><img src={mail} className="contact-icons mail" alt="mail icon"/></a>
-                <a href="https://www.linkedin.com/in/lindseysatterfield/"><img src={linkedin1} className="contact-icons linkedin" alt="linkedin icon"/></a>
-                <a href="https://github.com/lindseysatterfield"><img src={github1} className="contact-icons github" alt="github icon"/></a>
+                <a href="mailto:satterfield.lindsey@gmail.com" target="_blank" rel="noopener noreferrer"><img src={mail} className="contact-icons mail" alt="mail icon"/></a>
+                <a href="https://www.linkedin.com/in/lindseysatterfield/" target="_blank" rel="noopener noreferrer"><img src={linkedin1} className="contact-icons linkedin" alt="linkedin icon"/></a>
+                <a href="https://github.com/lindseysatterfield" target="_blank" rel="noopener noreferrer"><img src={github1} className="contact-icons github" alt="github icon"/></a>
               </div>
             </div>
           </div>
