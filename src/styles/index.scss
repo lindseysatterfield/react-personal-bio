@@ -3,6 +3,7 @@
 @import 'bio';
 @import 'technologies';
 @import 'projects';
+@import 'contact';
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
@@ -16,6 +17,6 @@ body {
 }
 
 .main-container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
