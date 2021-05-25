@@ -6,7 +6,6 @@ import Routes from '../helpers/Routes';
 
 function App() {
   const [admin, setAdmin] = useState(null);
-  // const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {

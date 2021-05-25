@@ -1,7 +1,7 @@
 import React from 'react';
 import mail from '../../assets/mail.png';
-import linkedin1 from '../../assets/linkedin1.png';
-import github1 from '../../assets/github1.png';
+import linkedin from '../../assets/linkedin.png';
+import github from '../../assets/github.png';
 import lindsey from '../../assets/lindsey.png';
 
 export default function Bio() {
@@ -14,8 +14,8 @@ export default function Bio() {
               <h3>software developer</h3>
               <div id="contact-me">
                 <a href="mailto:satterfield.lindsey@gmail.com" target="_blank" rel="noopener noreferrer"><img src={mail} className="contact-icons mail" alt="mail icon"/></a>
-                <a href="https://www.linkedin.com/in/lindseysatterfield/" target="_blank" rel="noopener noreferrer"><img src={linkedin1} className="contact-icons linkedin" alt="linkedin icon"/></a>
-                <a href="https://github.com/lindseysatterfield" target="_blank" rel="noopener noreferrer"><img src={github1} className="contact-icons github" alt="github icon"/></a>
+                <a href="https://www.linkedin.com/in/lindseysatterfield/" target="_blank" rel="noopener noreferrer"><img src={linkedin} className="contact-icons linkedin" alt="linkedin icon"/></a>
+                <a href="https://github.com/lindseysatterfield" target="_blank" rel="noopener noreferrer"><img src={github} className="contact-icons github" alt="github icon"/></a>
               </div>
             </div>
           </div>
