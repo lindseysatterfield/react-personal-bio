@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import getProjects from '../data/ProjectData';
+import ProjectCard from '../../components/ProjectCard';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -13,7 +14,18 @@ export default function Projects() {
     <div>
       <h1 className="text-center my-3">projects</h1>
       <div className="projects-container">
-        {projects.map((projectInfo) => projectInfo.title)}
+        {projects.map((projectInfo) => (
+          <ProjectCard key={projectInfo.firebaseKey}
+            projects={projects}
+            setProjects={setProjects}
+            title={projectInfo.title}
+            description={projectInfo.description}
+            screenshot={projectInfo.screenshot}
+            technologiesUsed={projectInfo.technologiesUsed}
+            url={projectInfo.url}
+            githubUrl={projectInfo.githubUrl}
+          />
+        ))}
       </div>
     </div>
   );
@@ -21,5 +33,11 @@ export default function Projects() {
 
 Projects.propTypes = {
   projects: PropTypes.array,
-  setProjects: PropTypes.func
+  setProjects: PropTypes.func,
+  screenshot: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  technologiesUsed: PropTypes.string,
+  url: PropTypes.string,
+  githubUrl: PropTypes.string
 };
