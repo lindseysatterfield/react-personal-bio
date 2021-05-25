@@ -1,0 +1,15 @@
+.technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.technologies-container li {
+  margin: 1em;
+  padding: 1em;
+  background-color: #7D6ADC;
+  border-radius: 10px;
+  list-style-type: none;
+}
