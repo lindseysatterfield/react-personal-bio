@@ -1,0 +1,31 @@
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#card {
+  width: 20em;
+  height: 40em;
+  margin: 1em;
+  text-align: center;
+}
+
+.project-img {
+  width: 20em;
+  height: 10em;
+}
+
+.project-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+}
+
+.project-icon {
+  width: 2.5em;
+  margin: 1em;
+}
