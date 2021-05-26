@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
+  CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import github from '../assets/github.png';
 import link from '../assets/link.png';
+import { deleteProject } from '../helpers/data/ProjectData';
 
 const ProjectCard = ({
   screenshot,
@@ -13,8 +14,15 @@ const ProjectCard = ({
   description,
   technologiesUsed,
   url,
-  githubUrl
-}) => (
+  githubUrl,
+  firebaseKey,
+  setProjects
+}) => {
+  const handleClick = () => {
+    deleteProject(firebaseKey).then((projectArray) => setProjects(projectArray));
+  };
+
+  return (
     <div>
       <Card id="card">
         <CardImg top width="100%" src={screenshot} alt={title} className="project-img"/>
@@ -26,10 +34,12 @@ const ProjectCard = ({
             <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
           </div>
+          <Button color="danger" onClick={handleClick}>Delete</Button>
         </CardBody>
       </Card>
     </div>
-);
+  );
+};
 
 ProjectCard.propTypes = {
   screenshot: PropTypes.string,
@@ -37,7 +47,9 @@ ProjectCard.propTypes = {
   description: PropTypes.string,
   technologiesUsed: PropTypes.string,
   url: PropTypes.string,
-  githubUrl: PropTypes.string
+  githubUrl: PropTypes.string,
+  setProjects: PropTypes.func,
+  firebaseKey: PropTypes.string
 };
 
 export default ProjectCard;

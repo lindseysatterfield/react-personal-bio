@@ -35,10 +35,12 @@ export default function Routes({ admin }) {
         />
         <Route
           exact path='/admin'
+          admin={admin}
           component={() => <Admin admin={admin}/>}
         />
         <Route
           exact path='/authedAdmin'
+          admin={admin}
           component={() => <AuthedAdmin admin={admin}/>}
         />
       </Switch>

@@ -16,6 +16,7 @@ export default function Projects() {
       <div className="projects-container">
         {projects.map((projectInfo) => (
           <ProjectCard key={projectInfo.firebaseKey}
+            firebaseKey={projectInfo.firebaseKey}
             projects={projects}
             setProjects={setProjects}
             title={projectInfo.title}
