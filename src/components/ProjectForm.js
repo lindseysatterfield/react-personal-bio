@@ -1,16 +1,36 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
+import { addProject } from '../helpers/data/ProjectData';
 
 export default function ProjectForm() {
-  const [project, setProject] = useState([]);
+  const [project, setProject] = useState({
+    title: '',
+    description: '',
+    screenshot: '',
+    technologiesUsed: '',
+    url: '',
+    githubUrl: ''
+  });
+
+  const handleInputChange = (e) => {
+    setProject((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addProject(project);
+  };
 
   return (
     <div>
       <form
           id='AddProjectForm'
           autoComplete='off'
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           >
           <label>Title: </label>
           <input
@@ -18,7 +38,7 @@ export default function ProjectForm() {
             type='text'
             placeholder='Title'
             value={project.title}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
           >
           </input>
 
@@ -28,7 +48,7 @@ export default function ProjectForm() {
             type='text'
             placeholder='Description'
             value={project.description}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
           >
           </input>
 
@@ -38,7 +58,7 @@ export default function ProjectForm() {
             type='url'
             placeholder='Screenshot'
             value={project.screenshot}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
           >
           </input>
           <label>Technologies: </label>
@@ -47,7 +67,7 @@ export default function ProjectForm() {
             type='text'
             placeholder='Technologies Used'
             value={project.technologiesUsed}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
           >
           </input>
           <label>URL: </label>
@@ -56,7 +76,7 @@ export default function ProjectForm() {
             type='url'
             placeholder='URL'
             value={project.url}
-            // onChange={handleInputChange}
+            onChange={handleInputChange}
           >
           </input>
           <label>Github URL: </label>
@@ -64,8 +84,8 @@ export default function ProjectForm() {
             name='githubUrl'
             type='url'
             placeholder='Github URL'
-            value={project.GithubUrl}
-            // onChange={handleInputChange}
+            value={project.githubUrl}
+            onChange={handleInputChange}
           >
           </input>
           <Button className='mt-5' outline size="md" color="info" type='submit' onClick={handleSubmit}>Submit</Button>

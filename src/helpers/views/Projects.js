@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import getProjects from '../data/ProjectData';
+import { getProjects } from '../data/ProjectData';
 import ProjectCard from '../../components/ProjectCard';
 
 export default function Projects() {
