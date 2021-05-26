@@ -6,26 +6,39 @@ import Contact from './views/Contact';
 import Home from './views/Home';
 import Projects from './views/Projects';
 import Technologies from './views/Technologies';
+import AuthedAdmin from './views/AuthedAdmin';
 
-export default function Routes({ admin, projects, setProjects }) {
+export default function Routes({ admin }) {
   return (
     <div>
       <Switch>
-        <Route exact path='/'
-        component={Home}
+        <Route
+          exact path='/'
+          component={Home}
         />
-        <Route exact path='/bio'
-        component={Bio}
+        <Route
+          exact path='/bio'
+          component={Bio}
         />
-        <Route exact path='/technologies'
-        component={Technologies}
+        <Route
+          exact path='/technologies'
+          component={Technologies}
         />
         <Route
           exact path='/projects'
-          component={() => <Projects admin={admin} projects={projects} setProjects={setProjects} />}
+          component={Projects}
         />
-        <Route exact path='/contact-me'
-        component={Contact}
+        <Route
+          exact path='/contact-me'
+          component={Contact}
+        />
+        <Route
+          exact path='/edit'
+          component={() => <Projects admin={admin}/>}
+        />
+        <Route
+          exact path='/authedAdmin'
+          component={() => <AuthedAdmin admin={admin}/>}
         />
       </Switch>
     </div>
@@ -33,7 +46,5 @@ export default function Routes({ admin, projects, setProjects }) {
 }
 
 Routes.propTypes = {
-  admin: PropTypes.any,
-  projects: PropTypes.array,
-  setProjects: PropTypes.func
+  admin: PropTypes.any
 };
