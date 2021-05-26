@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+// import { NavHashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 import {
   Collapse,
   Navbar,
