@@ -7,6 +7,7 @@ import Home from './views/Home';
 import Projects from './views/Projects';
 import Technologies from './views/Technologies';
 import AuthedAdmin from './views/AuthedAdmin';
+import Admin from './views/Admin';
 
 export default function Routes({ admin }) {
   return (
@@ -33,8 +34,8 @@ export default function Routes({ admin }) {
           component={Contact}
         />
         <Route
-          exact path='/edit'
-          component={() => <Projects admin={admin}/>}
+          exact path='/admin'
+          component={() => <Admin admin={admin}/>}
         />
         <Route
           exact path='/authedAdmin'

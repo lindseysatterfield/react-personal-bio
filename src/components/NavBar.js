@@ -62,7 +62,7 @@ const NavBar = ({ admin }) => {
             {
             admin
               ? <NavItem>
-                  <Link className="nav-link text-light" to="/edit">Edit</Link>
+                  <Link className="nav-link text-light" to="/admin">Admin</Link>
                 </NavItem>
               : ''
             }
