@@ -46,8 +46,10 @@ const ProjectCard = ({
             <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
           </div>
           <div className="d-flex flex-column">
-            <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>Edit</Button>
             <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
+            <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
+              {editing ? 'Close Form' : 'Edit'}
+            </Button>
           </div>
           {
             editing && <ProjectForm

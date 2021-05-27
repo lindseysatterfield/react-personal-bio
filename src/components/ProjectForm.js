@@ -34,9 +34,10 @@ export default function ProjectForm({
     e.preventDefault();
     if (project.firebaseKey) {
       updateProject(project, firebaseKey);
-      console.warn(firebaseKey);
+      // updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
     } else {
       addProject(project);
+      // addProject(project).then((projectArray) => setProjects(projectArray));
     }
   };
 
