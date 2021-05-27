@@ -17,7 +17,8 @@ const ProjectCard = ({
   url,
   githubUrl,
   firebaseKey,
-  setProjects
+  setProjects,
+  admin
 }) => {
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
@@ -45,12 +46,16 @@ const ProjectCard = ({
             <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
           </div>
-          <div className="d-flex flex-column">
-            <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
-            <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
-              {editing ? 'Close Form' : 'Edit'}
-            </Button>
-          </div>
+          {
+            admin
+              ? <div className="d-flex flex-column">
+                  <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
+                  <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
+                    {editing ? 'Close Form' : 'Edit'}
+                  </Button>
+                </div>
+              : ''
+          }
           {
             editing && <ProjectForm
               setProjects={setProjects}
@@ -77,7 +82,8 @@ ProjectCard.propTypes = {
   url: PropTypes.string,
   githubUrl: PropTypes.string,
   setProjects: PropTypes.func,
-  firebaseKey: PropTypes.string
+  firebaseKey: PropTypes.string,
+  admin: PropTypes.any
 };
 
 export default ProjectCard;
