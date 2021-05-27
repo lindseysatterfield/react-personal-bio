@@ -14,23 +14,6 @@ const NavBar = ({ admin }) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  // const authenticated = () => (
-  //   <>
-  //     <NavItem>
-  //       <Link className="nav-link text-light" to="/bio">Bio</Link>
-  //     </NavItem>
-  //     <NavItem>
-  //       <Link className="nav-link text-light" to="/technologies">Technologies</Link>
-  //     </NavItem>
-  //     <NavItem>
-  //       <Link className="nav-link text-light" to="/projects">Projects</Link>
-  //     </NavItem>
-  //     <NavItem>
-  //       <Link className="nav-link text-light" to="/contact-me">Contact Me</Link>
-  //     </NavItem>
-  //   </>
-  // );
-
   return (
     <div>
       <Navbar color="dark" light expand="md">
@@ -38,15 +21,6 @@ const NavBar = ({ admin }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {/* { admin && authenticated()}
-              {
-                admin !== null && <NavItem>
-                  {
-                    admin
-                      ? <Button color='danger' onClick={signOutUser}>Sign Out</Button>
-                      : <Button color='info' onClick={signInUser}>Sign In</Button>
-                  }
-              </NavItem> } */}
             <NavItem>
               <Link className="nav-link text-light" to="/bio">Bio</Link>
             </NavItem>
@@ -60,11 +34,11 @@ const NavBar = ({ admin }) => {
               <Link className="nav-link text-light" to="/contact-me">Contact Me</Link>
             </NavItem>
             {
-            admin
-              ? <NavItem>
-                  <Link className="nav-link text-light" to="/admin">Admin</Link>
-                </NavItem>
-              : ''
+              admin
+                ? <NavItem>
+                    <Link className="nav-link text-light" to="/admin">Admin</Link>
+                  </NavItem>
+                : ''
             }
           </Nav>
         </Collapse>

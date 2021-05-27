@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
-import { addProject } from '../helpers/data/ProjectData';
+import { addProject, updateProject } from '../helpers/data/ProjectData';
 
-export default function ProjectForm() {
+export default function ProjectForm({
+  title,
+  description,
+  screenshot,
+  technologiesUsed,
+  url,
+  githubUrl,
+  firebaseKey
+  // setProjects
+}) {
   const [project, setProject] = useState({
-    title: '',
-    description: '',
-    screenshot: '',
-    technologiesUsed: '',
-    url: '',
-    githubUrl: ''
+    title: title || '',
+    description: description || '',
+    screenshot: screenshot || '',
+    technologiesUsed: technologiesUsed || '',
+    url: url || '',
+    githubUrl: githubUrl || '',
+    firebaseKey: firebaseKey || null
   });
 
   const handleInputChange = (e) => {
@@ -21,7 +32,13 @@ export default function ProjectForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addProject(project);
+    if (project.firebaseKey) {
+      updateProject(project, firebaseKey);
+      // updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
+    } else {
+      addProject(project);
+      // addProject(project).then((projectArray) => setProjects(projectArray));
+    }
   };
 
   return (
@@ -87,8 +104,19 @@ export default function ProjectForm() {
             onChange={handleInputChange}
           >
           </input>
-          <Button className='mt-5' outline size="md" color="info" type='submit' onClick={handleSubmit}>Submit</Button>
+          <Button className='mt-3' color="danger" type='submit' onClick={handleSubmit}>Submit</Button>
         </form>
     </div>
   );
 }
+
+ProjectForm.propTypes = {
+  // setProjects: PropTypes.func,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  screenshot: PropTypes.string,
+  technologiesUsed: PropTypes.string,
+  url: PropTypes.string,
+  githubUrl: PropTypes.string,
+  firebaseKey: PropTypes.string
+};

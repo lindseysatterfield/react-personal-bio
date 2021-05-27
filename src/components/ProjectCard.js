@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Card, CardImg, CardText, CardBody,
@@ -7,6 +7,7 @@ import {
 import github from '../assets/github.png';
 import link from '../assets/link.png';
 import { deleteProject } from '../helpers/data/ProjectData';
+import ProjectForm from './ProjectForm';
 
 const ProjectCard = ({
   screenshot,
@@ -18,8 +19,18 @@ const ProjectCard = ({
   firebaseKey,
   setProjects
 }) => {
-  const handleClick = () => {
-    deleteProject(firebaseKey).then((projectArray) => setProjects(projectArray));
+  const [editing, setEditing] = useState(false);
+  const handleClick = (type) => {
+    switch (type) {
+      case 'delete':
+        deleteProject(firebaseKey).then((projectArray) => setProjects(projectArray));
+        break;
+      case 'edit':
+        setEditing((prevState) => !prevState);
+        break;
+      default:
+        console.warn('nothing selected');
+    }
   };
 
   return (
@@ -34,7 +45,24 @@ const ProjectCard = ({
             <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
           </div>
-          <Button color="danger" onClick={handleClick}>Delete</Button>
+          <div className="d-flex flex-column">
+            <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
+            <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
+              {editing ? 'Close Form' : 'Edit'}
+            </Button>
+          </div>
+          {
+            editing && <ProjectForm
+              setProjects={setProjects}
+              screenshot={screenshot}
+              title={title}
+              description={description}
+              technologiesUsed={technologiesUsed}
+              url={url}
+              githubUrl={githubUrl}
+              firebaseKey={firebaseKey}
+            />
+          }
         </CardBody>
       </Card>
     </div>
