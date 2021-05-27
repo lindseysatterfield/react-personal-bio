@@ -10,8 +10,8 @@ export default function ProjectForm({
   technologiesUsed,
   url,
   githubUrl,
-  firebaseKey
-  // setProjects
+  firebaseKey,
+  setProjects
 }) {
   const [project, setProject] = useState({
     title: title || '',
@@ -33,11 +33,9 @@ export default function ProjectForm({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (project.firebaseKey) {
-      updateProject(project, firebaseKey);
-      // updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
+      updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
     } else {
-      addProject(project);
-      // addProject(project).then((projectArray) => setProjects(projectArray));
+      addProject(project).then((projectArray) => setProjects(projectArray));
     }
   };
 
@@ -111,7 +109,7 @@ export default function ProjectForm({
 }
 
 ProjectForm.propTypes = {
-  // setProjects: PropTypes.func,
+  setProjects: PropTypes.func,
   title: PropTypes.string,
   description: PropTypes.string,
   screenshot: PropTypes.string,

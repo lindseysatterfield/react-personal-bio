@@ -1,13 +1,16 @@
 import React from 'react';
-import ProjectForm from '../../components/ProjectForm';
-import Projects from './Projects';
+import PropTypes from 'prop-types';
+import AdminProjects from '../../components/AdminProjects';
 
-export default function Admin() {
+export default function Admin({ admin }) {
   return (
     <div>
-      <h1>Admin</h1>
-      <ProjectForm />
-      <Projects />
+      <h1 className="text-center my-2">Admin Projects</h1>
+      <AdminProjects admin={admin}/>
     </div>
   );
 }
+
+Admin.propTypes = {
+  admin: PropTypes.any
+};
