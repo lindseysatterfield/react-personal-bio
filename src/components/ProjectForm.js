@@ -33,10 +33,8 @@ export default function ProjectForm({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (project.firebaseKey) {
-      // updateProject(project, firebaseKey);
       updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
     } else {
-      // addProject(project);
       addProject(project).then((projectArray) => setProjects(projectArray));
     }
   };
