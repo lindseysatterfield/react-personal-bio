@@ -4,7 +4,7 @@ import { getProjects } from '../helpers/data/ProjectData';
 import ProjectCard from './ProjectCard';
 import ProjectForm from './ProjectForm';
 
-export default function AdminProjects() {
+export default function AdminProjects({ admin }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export default function AdminProjects() {
             technologiesUsed={projectInfo.technologiesUsed}
             url={projectInfo.url}
             githubUrl={projectInfo.githubUrl}
+            admin={admin}
           />
         ))}
       </div>
@@ -42,5 +43,6 @@ AdminProjects.propTypes = {
   description: PropTypes.string,
   technologiesUsed: PropTypes.string,
   url: PropTypes.string,
-  githubUrl: PropTypes.string
+  githubUrl: PropTypes.string,
+  admin: PropTypes.any
 };

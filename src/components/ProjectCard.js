@@ -17,7 +17,8 @@ const ProjectCard = ({
   url,
   githubUrl,
   firebaseKey,
-  setProjects
+  setProjects,
+  admin
 }) => {
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
@@ -37,20 +38,26 @@ const ProjectCard = ({
     <div>
       <Card id="card">
         <CardImg top width="100%" src={screenshot} alt={title} className="project-img"/>
-        <CardBody>
+        <CardBody className="d-flex flex-column">
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{description}</CardSubtitle>
-          <CardText>{technologiesUsed}</CardText>
-          <div className="project-icons-container">
-            <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
+          <div className="mt-auto">
+            <CardText tag="h6">{technologiesUsed}</CardText>
+            <div className="project-icons-container">
+              <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
+            </div>
           </div>
-          <div className="d-flex flex-column">
-            <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
-            <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
-              {editing ? 'Close Form' : 'Edit'}
-            </Button>
-          </div>
+          {
+            admin
+              ? <div className="d-flex flex-column">
+                  <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
+                  <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
+                    {editing ? 'Close Form' : 'Edit'}
+                  </Button>
+                </div>
+              : ''
+          }
           {
             editing && <ProjectForm
               setProjects={setProjects}
@@ -77,7 +84,8 @@ ProjectCard.propTypes = {
   url: PropTypes.string,
   githubUrl: PropTypes.string,
   setProjects: PropTypes.func,
-  firebaseKey: PropTypes.string
+  firebaseKey: PropTypes.string,
+  admin: PropTypes.any
 };
 
 export default ProjectCard;
