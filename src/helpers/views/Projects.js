@@ -11,8 +11,8 @@ export default function Projects() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-center my-3" id="projects">projects</h1>
+    <div className="my-5">
+      <h2 className="text-center my-3" id="projects">projects</h2>
       <div className="projects-container">
         {projects.map((projectInfo) => (
           <ProjectCard key={projectInfo.firebaseKey}
