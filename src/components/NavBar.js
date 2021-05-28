@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+// import { Link as ScrollLink } from 'react-scroll';
+// import * as Scroll from 'react-scroll';
+// import Scroll from 'react-scroll';
 import {
   Collapse,
   Navbar,
@@ -23,15 +26,55 @@ const NavBar = ({ admin }) => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <Link className="nav-link text-light" to="/bio">Bio</Link>
+              {/* <Link
+                className="nav-link text-light"
+                to="bio"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                duration={1500}
+              >
+                Bio
+              </Link> */}
             </NavItem>
             <NavItem>
               <Link className="nav-link text-light" to="/technologies">Technologies</Link>
+              {/* <Link
+                className="nav-link text-light"
+                to="technologies"
+                activeClass="active"
+                // spy={true}
+                smooth={true}
+                duration={1500}
+              >
+                Technologies
+              </Link> */}
             </NavItem>
             <NavItem>
               <Link className="nav-link text-light" to="/projects">Projects</Link>
+              {/* <Link
+                className="nav-link text-light"
+                to="projects"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                duration={1500}
+              >
+                Projects
+              </Link> */}
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/contact-me">Contact Me</Link>
+              <Link className="nav-link text-light" to="contact-me">Contact Me</Link>
+              {/* <Link
+                className="nav-link text-light"
+                to="contact"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                duration={1500}
+              >
+                Contact
+              </Link> */}
             </NavItem>
             {
               admin
