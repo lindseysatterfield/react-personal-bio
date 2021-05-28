@@ -1,7 +1,34 @@
-# React Template
+# Lindsey Satterfield - Personal Bio
 
-**Use this template to get up and running quickly on projects.**
+#### Overview
+This is my personal bio site which includes sections such as bio, technologies, projects, and contact.
 
-This is just like the webpack template. Use it, create the repo, connect it to your local and `npm i`.
+#### Deployed Project [![Netlify Status](https://api.netlify.com/api/v1/badges/fe8bf5d3-fa89-43d0-bcaa-c15a15dde632/deploy-status)](https://app.netlify.com/sites/lindseysatterfield/deploys)
+[Link](https://lindseysatterfield.netlify.app/)
+#### Project Board
+https://github.com/lindseysatterfield/react-personal-bio/projects/1
 
-- [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
+#### Features
+- Admin authentication
+- Admin only view where the admin can perform full CRUD
+- Full CRUD on the projects section
+- Hidden login button for admins
+- Responsive design
+
+#### Technologies
+- React
+- Vanilla JavaScript
+- HTML
+- CSS
+- SASS
+- Reactstrap
+- Bootstrap
+- Firebase
+- Git
+
+#### Screenshots
+![](./src/assets/screenshots/landingPage.png)
+![](./src/assets/screenshots/projects.png)
+
+#### Contributors
+[Lindsey Satterfield](https://github.com/lindseysatterfield)
