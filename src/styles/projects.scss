@@ -37,3 +37,9 @@
 .card-title {
   color: purple;
 }
+
+@media(max-width: 458px) {
+  #card {
+    width: auto;
+  }
+}
