@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
-// import { Link as ScrollLink } from 'react-scroll';
-// import * as Scroll from 'react-scroll';
-// import Scroll from 'react-scroll';
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import {
   Collapse,
   Navbar,
@@ -25,61 +23,41 @@ const NavBar = ({ admin }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link className="nav-link text-light" to="/bio">Bio</Link>
-              {/* <Link
+              <NavHashLink smooth to="/#bio"
                 className="nav-link text-light"
-                to="bio"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={1500}
-              >
-                Bio
-              </Link> */}
+                activeClassName="selected"
+                >
+                  Bio
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/technologies">Technologies</Link>
-              {/* <Link
+              <NavHashLink smooth to="/#technologies"
                 className="nav-link text-light"
-                to="technologies"
-                activeClass="active"
-                // spy={true}
-                smooth={true}
-                duration={1500}
-              >
-                Technologies
-              </Link> */}
+                activeClassName="selected"
+                >
+                  Technologies
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/projects">Projects</Link>
-              {/* <Link
+              <NavHashLink smooth to="/#projects"
                 className="nav-link text-light"
-                to="projects"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={1500}
-              >
-                Projects
-              </Link> */}
+                activeClassName="selected"
+                >
+                  Projects
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="contact-me">Contact Me</Link>
-              {/* <Link
+              <NavHashLink smooth to="/#contact"
                 className="nav-link text-light"
-                to="contact"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={1500}
-              >
-                Contact
-              </Link> */}
+                activeClassName="selected"
+                >
+                  Contact Me
+              </NavHashLink>
             </NavItem>
             {
               admin
                 ? <NavItem>
-                    <Link className="nav-link text-light" to="/admin">Admin</Link>
+                    <Link className="nav-link text-light" to="admin">Admin</Link>
                   </NavItem>
                 : ''
             }
