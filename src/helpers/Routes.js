@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, Redirect } from 'react-router-dom';
-// import Bio from './views/Bio';
-// import Contact from './views/Contact';
 import Home from './views/Home';
-// import Projects from './views/Projects';
-// import Technologies from './views/Technologies';
 import AuthedAdmin from './views/AuthedAdmin';
 import Admin from './views/Admin';
 
