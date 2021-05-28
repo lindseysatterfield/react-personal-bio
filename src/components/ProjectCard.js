@@ -38,13 +38,15 @@ const ProjectCard = ({
     <div>
       <Card id="card">
         <CardImg top width="100%" src={screenshot} alt={title} className="project-img"/>
-        <CardBody>
+        <CardBody className="d-flex flex-column">
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{description}</CardSubtitle>
-          <CardText>{technologiesUsed}</CardText>
-          <div className="project-icons-container">
-            <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
+          <div className="mt-auto">
+            <CardText tag="h6">{technologiesUsed}</CardText>
+            <div className="project-icons-container">
+              <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
+            </div>
           </div>
           {
             admin

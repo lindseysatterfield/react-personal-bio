@@ -36,6 +36,16 @@ export default function ProjectForm({
       updateProject(project, firebaseKey).then((projectArray) => setProjects(projectArray));
     } else {
       addProject(project).then((projectArray) => setProjects(projectArray));
+
+      setProject({
+        title: '',
+        description: '',
+        screenshot: '',
+        technologiesUsed: '',
+        url: '',
+        githubUrl: '',
+        firebaseKey: null
+      });
     }
   };
 
