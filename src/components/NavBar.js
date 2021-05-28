@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import {
   Collapse,
   Navbar,
@@ -22,21 +23,41 @@ const NavBar = ({ admin }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link className="nav-link text-light" to="/bio">Bio</Link>
+              <NavHashLink smooth to="/#bio"
+                className="nav-link text-light"
+                activeClassName="selected"
+                >
+                  Bio
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/technologies">Technologies</Link>
+              <NavHashLink smooth to="/#technologies"
+                className="nav-link text-light"
+                activeClassName="selected"
+                >
+                  Technologies
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/projects">Projects</Link>
+              <NavHashLink smooth to="/#projects"
+                className="nav-link text-light"
+                activeClassName="selected"
+                >
+                  Projects
+              </NavHashLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link text-light" to="/contact-me">Contact Me</Link>
+              <NavHashLink smooth to="/#contact"
+                className="nav-link text-light"
+                activeClassName="selected"
+                >
+                  Contact Me
+              </NavHashLink>
             </NavItem>
             {
               admin
                 ? <NavItem>
-                    <Link className="nav-link text-light" to="/admin">Admin</Link>
+                    <Link className="nav-link text-light" to="admin">Admin</Link>
                   </NavItem>
                 : ''
             }

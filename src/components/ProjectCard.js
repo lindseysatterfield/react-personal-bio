@@ -51,8 +51,8 @@ const ProjectCard = ({
           {
             admin
               ? <div className="d-flex flex-column">
-                  <Button color="danger" onClick={() => handleClick('delete')}>Delete</Button>
-                  <Button color="primary" className="my-2"onClick={() => handleClick('edit')}>
+                  <Button color="danger" size="sm" onClick={() => handleClick('delete')}>Delete</Button>
+                  <Button color="primary" size="sm" className="my-2"onClick={() => handleClick('edit')}>
                     {editing ? 'Close Form' : 'Edit'}
                   </Button>
                 </div>

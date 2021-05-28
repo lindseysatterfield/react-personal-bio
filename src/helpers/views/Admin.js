@@ -5,7 +5,7 @@ import AdminProjects from '../../components/AdminProjects';
 export default function Admin({ admin }) {
   return (
     <div>
-      <h1 className="text-center my-2">Admin Projects</h1>
+      <h1 className="text-center my-2" id="admin">Admin Projects</h1>
       <AdminProjects admin={admin}/>
     </div>
   );

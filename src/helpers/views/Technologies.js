@@ -3,7 +3,7 @@ import React from 'react';
 export default function Technologies() {
   return (
     <div>
-      <h1 className="text-center my-3">technologies</h1>
+      <h1 className="text-center my-3" id="technologies">technologies</h1>
       <ul className="technologies-container">
         <li>React</li>
         <li>JavaScript</li>
