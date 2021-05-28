@@ -6,11 +6,11 @@ import lindsey from '../../assets/lindsey.png';
 
 export default function Bio() {
   return (
-    <div className="wrapper">
+    <div className="wrapper mb-5">
       <div className="header-container">
           <div className="name-header-container">
             <div className="header">
-              <h1 className="my-4 font-weight-bold">LINDSEY SATTERFIELD</h1>
+              <h1 className="my-4 font-weight-bold lindsey-name">LINDSEY SATTERFIELD</h1>
               <h3 id="bio">software developer</h3>
               <div id="contact-me">
                 <a href="mailto:satterfield.lindsey@gmail.com" target="_blank" rel="noopener noreferrer"><img src={mail} className="contact-icons mail" alt="mail icon"/></a>

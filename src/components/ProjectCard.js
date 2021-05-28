@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle, Button
 } from 'reactstrap';
 import github from '../assets/github.png';
 import link from '../assets/link.png';
@@ -40,8 +40,9 @@ const ProjectCard = ({
         <CardImg top width="100%" src={screenshot} alt={title} className="project-img"/>
         <CardBody className="d-flex flex-column">
           <CardTitle tag="h5">{title}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">{description}</CardSubtitle>
+          <CardText tag="h6" className="mb-2">{description}</CardText>
           <div className="mt-auto">
+            <h6>Technologies Used:</h6>
             <CardText tag="h6">{technologiesUsed}</CardText>
             <div className="project-icons-container">
               <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>

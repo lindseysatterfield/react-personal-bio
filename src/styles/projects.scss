@@ -6,15 +6,19 @@
 }
 
 #card {
-  width: 20em;
-  height: 30em;
+  width: 26em;
+  height: 34em;
   margin: 1em;
   text-align: center;
+  border:2px solid #dadada;
+  border-radius:7px;
+  outline:none;
+  border-color: purple;
+  box-shadow:0 0 10px purple;
 }
 
 .project-img {
-  width: 20em;
-  height: 10em;
+  height: 14em;
 }
 
 .project-icons-container {
@@ -26,6 +30,10 @@
 }
 
 .project-icon {
-  width: 2.5em;
-  margin: 1em;
+  width: 2.3em;
+  margin: .5em 1em 0 1em;
+}
+
+.card-title {
+  color: purple;
 }
