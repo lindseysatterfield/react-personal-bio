@@ -6,16 +6,24 @@
 }
 
 #card {
-  width: 20em;
-  height: 30em;
+  width: 25em;
+  height: 33em;
   margin: 1em;
   text-align: center;
+  border:2px solid #dadada;
+  border-radius:7px;
+  outline:none;
+  border-color: purple;
+  box-shadow:0 0 10px purple;
 }
 
 .project-img {
-  width: 20em;
-  height: 10em;
+  height: 14em;
 }
+
+// .card-body {
+//   background-color: #22b6dc;
+// }
 
 .project-icons-container {
   display: flex;
@@ -28,4 +36,8 @@
 .project-icon {
   width: 2.5em;
   margin: 1em;
+}
+
+.card-title {
+  color: purple;
 }
