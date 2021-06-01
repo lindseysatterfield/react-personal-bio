@@ -29,7 +29,7 @@ https://github.com/lindseysatterfield/react-personal-bio/projects/1
 #### Screenshots
 ![](./src/assets/screenshots/bio.png)
 ![](./src/assets/screenshots/projects.png)
-![](./src/assets/screenshots/contact.png)
+![](./src/assets/screenshots/contactMe.png)
 
 #### Contributors
 [Lindsey Satterfield](https://github.com/lindseysatterfield)
