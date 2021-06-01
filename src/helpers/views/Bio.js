@@ -23,8 +23,8 @@ export default function Bio() {
             <img src={lindsey} className="lindsey-img" alt="Lindsey Memoji"/>
           </div>
       </div>
-        <p>
-        As a long time enthusiast of all things technology, I am currently loving what I do -- developing websites and applications. A Nashville native, I am still here and currently attending Nashville Software School. Formerly a worker in the video production world and graduate of the University of Tennessee, I decided it was time to follow my dreams and enter the technology world to allow myself more creativity. When I am not in front of a computer, I enjoy hiking, photography, traveling, and going to Preds games.
+        <p id="about-me">
+        As a long time enthusiast of all things technology, I am currently loving what I do -- developing websites and applications. A Nashville native, I am still here and currently attending Nashville Software School. Formerly a worker in video production and graduate from the University of Tennessee, I decided it was time to follow my dreams and enter the technology world to allow myself more creativity. When I am not in front of a computer, I enjoy hiking, photography, traveling, and going to Preds games.
         </p>
     </div>
   );

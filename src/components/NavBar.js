@@ -23,7 +23,7 @@ const NavBar = ({ admin }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavHashLink smooth to="/#bio"
+              <NavHashLink smooth to="/#about-me"
                 className="nav-link text-light"
                 activeClassName="selected"
                 >
@@ -44,6 +44,14 @@ const NavBar = ({ admin }) => {
                 activeClassName="selected"
                 >
                   Projects
+              </NavHashLink>
+            </NavItem>
+            <NavItem>
+              <NavHashLink smooth to="/#certifications"
+                className="nav-link text-light"
+                activeClassName="selected"
+                >
+                  Certifications
               </NavHashLink>
             </NavItem>
             <NavItem>
