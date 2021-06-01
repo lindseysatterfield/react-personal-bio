@@ -5,7 +5,8 @@ import {
   CardTitle, Button
 } from 'reactstrap';
 import github from '../assets/github.png';
-import link from '../assets/link.png';
+import externalLink from '../assets/externalLink.png';
+
 import { deleteProject } from '../helpers/data/ProjectData';
 import ProjectForm from './ProjectForm';
 
@@ -45,7 +46,7 @@ const ProjectCard = ({
             <h6>Technologies Used:</h6>
             <CardText tag="h6">{technologiesUsed}</CardText>
             <div className="project-icons-container">
-              <a href={url} target="_blank" rel="noopener noreferrer"><img src={link} alt="link icon" className="project-icon"/></a>
+              <a href={url} target="_blank" rel="noopener noreferrer"><img src={externalLink} alt="link icon" className="project-icon"/></a>
               <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={github} alt="github icon" className="project-icon"/></a>
             </div>
           </div>

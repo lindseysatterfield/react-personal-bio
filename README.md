@@ -4,7 +4,7 @@
 This is my personal bio site which includes sections such as bio, technologies, projects, and contact.
 
 #### Deployed Project [![Netlify Status](https://api.netlify.com/api/v1/badges/fe8bf5d3-fa89-43d0-bcaa-c15a15dde632/deploy-status)](https://app.netlify.com/sites/lindseysatterfield/deploys)
-[Link](https://lindseysatterfield.netlify.app/)
+[https://lindseysatterfield.com](https://lindseysatterfield.com)
 #### Project Board
 https://github.com/lindseysatterfield/react-personal-bio/projects/1
 
@@ -27,8 +27,9 @@ https://github.com/lindseysatterfield/react-personal-bio/projects/1
 - Git
 
 #### Screenshots
-![](./src/assets/screenshots/landingPage.png)
+![](./src/assets/screenshots/bio.png)
 ![](./src/assets/screenshots/projects.png)
+![](./src/assets/screenshots/contact.png)
 
 #### Contributors
 [Lindsey Satterfield](https://github.com/lindseysatterfield)
