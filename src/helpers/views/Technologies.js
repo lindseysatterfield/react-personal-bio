@@ -32,6 +32,9 @@ export default function Technologies() {
         <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">
           <li><i className="fab fa-npm fa-3x"></i></li>
         </a>
+        <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+          <li><i className="fab fa-figma fa-3x"></i></li>
+        </a>
       </ul>
     </div>
   );
