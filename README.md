@@ -1,7 +1,7 @@
 # Lindsey Satterfield - Personal Bio
 
 #### Overview
-This is my personal bio site which includes sections such as bio, technologies, projects, certifications, and contact.
+This is my personal bio site which includes sections such as bio, technologies, projects, certifications, and contact information.
 
 #### Deployed Project [![Netlify Status](https://api.netlify.com/api/v1/badges/fe8bf5d3-fa89-43d0-bcaa-c15a15dde632/deploy-status)](https://app.netlify.com/sites/lindseysatterfield/deploys)
 [https://lindseysatterfield.com](https://lindseysatterfield.com)
