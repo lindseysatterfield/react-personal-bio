@@ -7,7 +7,7 @@
 
 #card {
   width: 26em;
-  height: 34em;
+  height: 33em;
   margin: 1em;
   text-align: center;
   border:2px solid #dadada;
@@ -15,6 +15,10 @@
   outline:none;
   border-color: purple;
   box-shadow:0 0 10px purple;
+
+  .technologies-used {
+    text-align: center;
+  }
 }
 
 .project-img {
@@ -36,10 +40,12 @@
 
 .card-title {
   color: purple;
+  text-align: center;
 }
 
 @media(max-width: 458px) {
   #card {
     width: auto;
+    height: 34em;
   }
 }
