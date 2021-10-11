@@ -9,7 +9,7 @@
   width: 26em;
   height: 33em;
   margin: 1em;
-  text-align: left;
+  text-align: center;
   border:2px solid #dadada;
   border-radius:7px;
   outline:none;
@@ -46,5 +46,6 @@
 @media(max-width: 458px) {
   #card {
     width: auto;
+    height: 34em;
   }
 }
