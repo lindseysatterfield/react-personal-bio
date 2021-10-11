@@ -43,7 +43,7 @@ const ProjectCard = ({
           <CardTitle tag="h5">{title}</CardTitle>
           <CardText tag="h6" className="mb-2">{description}</CardText>
           <div className="mt-auto">
-            <h6>Technologies Used:</h6>
+            <h6 className="technologies-used">Technologies Used:</h6>
             <CardText tag="h6">{technologiesUsed}</CardText>
             <div className="project-icons-container">
               <a href={url} target="_blank" rel="noopener noreferrer"><img src={externalLink} alt="link icon" className="project-icon"/></a>
